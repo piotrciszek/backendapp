@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AirportServiceImpl implements AirportService {
@@ -33,5 +34,10 @@ public class AirportServiceImpl implements AirportService {
         } else {
             return airportRepository.findAll();
         }
+    }
+
+    @Override
+    public Optional<Airport> getAirportById(Long id) {
+        return airportRepository.findById(id);
     }
 }
