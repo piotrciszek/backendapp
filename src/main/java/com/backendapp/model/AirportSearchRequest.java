@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SearchRequest {
+public class AirportSearchRequest {
     private String icao;
     private String name;
 }
